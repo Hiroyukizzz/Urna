@@ -1,0 +1,280 @@
+/* Animação para piscar um elemento */
+
+@keyframes pisca {
+    0%,
+    100% {
+        opacity: 0.2;
+        /* Opacidade no início e fim da animação */
+    }
+    50% {
+        opacity: 1;
+        /* Opacidade no meio da animação */
+    }
+}
+
+
+/* Estilo global para o corpo da página */
+
+body {
+    
+    margin: 0;
+    /* Remove margem padrão */
+    display: flex;
+    /* Usa flexbox para o layout */
+    justify-content: center;
+    /* Centraliza conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza conteúdo verticalmente */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte */
+    background-color: #000000;
+    /* Cor de fundo */
+}
+
+
+/* Estilo para o contêiner principal da urna */
+
+.urna {
+    background-color: #8d8989;
+    /* Fundo branco */
+    padding: 30px;
+    /* Espaçamento interno */
+    display: flex;
+    /* Usa flexbox para o layout */
+}
+
+/* Estilo para a tela da urna */
+
+.tela {
+    width: 500px;
+    /* Largura da tela */
+    height: 320px;
+    /* Altura da tela */
+    background: linear-gradient(to bottom, #e0e0e0, #d2d2d2);
+    /* Gradiente de fundo */
+    border: 2px solid #999999;
+    /* Borda */
+    display: flex;
+    /* Usa flexbox para o layout */
+    flex-direction: column;
+    /* Direção do flexbox em coluna */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+}
+
+
+/* Estilo para os números digitados */
+
+
+/* Estilo para o teclado */
+
+.teclado {
+    background-color: #e0e0e0;
+    /* Cor de fundo */
+    margin-left: 30px;
+    /* Espaçamento à esquerda */
+}
+
+
+/* Estilo para as linhas do teclado */
+
+.teclado--linha {
+    display: flex;
+    /* Usa flexbox para o layout */
+    justify-content: center;
+    /* Centraliza conteúdo horizontalmente */
+    align-items: flex-end;
+    /* Alinha conteúdo no final verticalmente */
+}
+
+
+/* Estilo para os botões do teclado */
+
+.teclado--botao {
+    width: 70px;
+    /* Largura */
+    height: 40px;
+    /* Altura */
+    background-color: #999999;
+    /* Cor de fundo */
+    color: #ffffff;
+    /* Cor do texto */
+    font-size: 25px;
+    /* Tamanho da fonte */
+    display: flex;
+    /* Usa flexbox para o layout */
+    justify-content: center;
+    /* Centraliza conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza conteúdo verticalmente */
+    margin: 10px;
+    /* Espaçamento */
+    cursor: pointer;
+    /* Muda cursor para indicar clicável */
+    border: none;
+    /* Remove borda */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+
+/* Estilo para o botão branco */
+
+.botao--branco {
+    background-color: #ffffff;
+    /* Fundo branco */
+    color: #000000;
+    /* Cor do texto preta */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    width: 90px;
+    /* Largura */
+    height: 50px;
+    /* Altura */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+
+/* Estilo para os botões corrige e confirma */
+
+.botao--corrige,
+.botao--confirma {
+    font-size: 15px;
+    /* Tamanho da fonte */
+    width: 90px;
+    /* Largura */
+    height: 50px;
+    /* Altura */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+
+/* Estilo específico para o botão corrige */
+
+.botao--corrige {
+    background-color: #f0ad4e;
+    /* Cor de fundo laranja */
+}
+
+
+/* Estilo específico para o botão confirma */
+
+.botao--confirma {
+    background-color: #5cb85c;
+    /* Cor de fundo verde */
+}
+
+
+/* Estilo para os campos de números */
+
+.numero {
+    display: inline-block;
+    /* Exibe em linha */
+    width: 30px;
+    /* Largura */
+    height: 40px;
+    /* Altura */
+    border: 1px solid #999999;
+    /* Borda */
+    text-align: center;
+    /* Alinha texto ao centro */
+    line-height: 40px;
+    /* Alinha texto verticalmente */
+    font-size: 25px;
+    /* Tamanho da fonte */
+    background-color: #ffffff;
+    /* Fundo branco */
+    margin: 5px;
+    /* Espaçamento */
+}
+
+.info-voto-numeros{
+    display: inline-flex;
+}
+
+/* Estilo para o efeito de piscar */
+
+.pisca {
+    animation: pisca 1s infinite;
+    /* Aplica animação de piscar infinitamente */
+}
+
+
+/* Estilo para as imagens dos candidatos */
+
+
+.info-imagem {
+    text-align: center;
+    /* Texto centralizado */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    padding: 10px;
+    /* Espaçamento interno */
+    max-width: 150px;
+    /* Largura máxima */
+    height: auto;
+    /* Altura automática */
+    overflow: hidden;
+    /* Oculta conteúdo excedente */
+}
+
+/* Estilo para as imagens dentro do contêiner de imagem */
+
+.info-imagem img {
+    max-width: 100%;
+    /* Largura máxima */
+    max-height: 100%;
+    /* Altura máxima */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    object-fit:contain;
+    /* Ajusta imagem dentro do contêiner */
+    width: 100%;
+    /* Largura total */
+    height: auto;
+    /* Altura automática */
+}
+
+.container-voto{
+    display: inline-flex;
+}
+
+
+/* Estilo para avisos grandes e gigantes */
+
+.aviso--grande,
+.aviso--gigante {
+    font-weight: bold;
+    /* Texto em negrito */
+    display: flex;
+    /* Usa flexbox para o layout */
+    justify-content: center;
+    /* Centraliza conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza conteúdo verticalmente */
+    height: 95%;
+}
+
+
+/* Estilo para avisos grandes */
+
+.aviso--grande {
+    font-size: 40px;
+    /* Tamanho da fonte */
+    color: #d9534f;
+    /* Cor vermelha */
+}
+
+
+/* Estilo para avisos gigantes */
+
+.aviso--gigante {
+    font-size: 70px;
+    /* Tamanho da fonte */
+    color: #d9534f;
+    /* Cor vermelha */
+}
